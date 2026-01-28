@@ -3,10 +3,10 @@
     <div class="flex justify-between">
       <div>
         <h3 class="text-lg font-semibold text-gray-800 dark:text-white/90">
-          Monthly Target
+          {{ 'dashboard.monthlyTarget' | translate }}
         </h3>
         <p class="mt-1 text-gray-500 text-theme-sm dark:text-gray-400">
-          Target you’ve set for each month
+          {{ 'dashboard.monthlyTargetDescription' | translate }}
         </p>
       </div>
       <div class="relative inline-block">
@@ -17,11 +17,11 @@
         <app-dropdown [isOpen]="isOpen" (close)="closeDropdown()" className="w-40 p-2">
           <app-dropdown-item (itemClick)="closeDropdown()"
             className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300">
-            View More
+            {{ 'dashboard.viewMore' | translate }}
           </app-dropdown-item>
           <app-dropdown-item (itemClick)="closeDropdown()"
             className="flex w-full font-normal text-left text-gray-500 rounded-lg hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300">
-            Delete
+            {{ 'dashboard.delete' | translate }}
           </app-dropdown-item>
         </app-dropdown>
       </div>
@@ -43,14 +43,14 @@
       </span>
     </div>
     <p class="mx-auto mt-10 w-full max-w-[380px] text-center text-sm text-gray-500 sm:text-base">
-      You earn $3287 today, it's higher than last month. Keep up your good work!
+      {{ 'dashboard.earningsMessage' | translate }}
     </p>
   </div>
 
   <div class="flex items-center justify-center gap-5 px-6 py-3.5 sm:gap-8 sm:py-5">
     <div>
       <p class="mb-1 text-center text-gray-500 text-theme-xs dark:text-gray-400 sm:text-sm">
-        Target
+        {{ 'dashboard.target' | translate }}
       </p>
       <p class="flex items-center justify-center gap-1 text-base font-semibold text-gray-800 dark:text-white/90 sm:text-lg">
         $20K
@@ -60,7 +60,7 @@
     <div class="w-px bg-gray-200 h-7 dark:bg-gray-800"></div>
     <div>
       <p class="mb-1 text-center text-gray-500 text-theme-xs dark:text-gray-400 sm:text-sm">
-        Revenue
+        {{ 'dashboard.revenue' | translate }}
       </p>
       <p class="flex items-center justify-center gap-1 text-base font-semibold text-gray-800 dark:text-white/90 sm:text-lg">
         $20K
@@ -70,7 +70,7 @@
     <div class="w-px bg-gray-200 h-7 dark:bg-gray-800"></div>
     <div>
       <p class="mb-1 text-center text-gray-500 text-theme-xs dark:text-gray-400 sm:text-sm">
-        Today
+        {{ 'dashboard.today' | translate }}
       </p>
       <p class="flex items-center justify-center gap-1 text-base font-semibold text-gray-800 dark:text-white/90 sm:text-lg">
         $20K

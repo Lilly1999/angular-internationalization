@@ -5,6 +5,7 @@ import { CheckboxComponent } from '../../form/input/checkbox.component';
 import { InputFieldComponent } from '../../form/input/input-field.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 
 @Component({
@@ -14,8 +15,9 @@ import { FormsModule } from '@angular/forms';
     CheckboxComponent,
     InputFieldComponent,
     RouterModule,
-    FormsModule
-],
+    FormsModule,
+    TranslatePipe
+  ],
   templateUrl: './signup-form.component.html',
   styles: ``
 })

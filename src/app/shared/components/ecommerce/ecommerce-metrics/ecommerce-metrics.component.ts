@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { BadgeComponent } from '../../ui/badge/badge.component';
 import { SafeHtmlPipe } from '../../../pipe/safe-html.pipe';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-ecommerce-metrics',
-  imports: [BadgeComponent,SafeHtmlPipe],
+  imports: [BadgeComponent, SafeHtmlPipe, TranslatePipe],
   templateUrl: './ecommerce-metrics.component.html'
 })
 export class EcommerceMetricsComponent {

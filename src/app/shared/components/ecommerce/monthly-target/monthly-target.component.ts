@@ -11,14 +11,16 @@ import {
 } from 'ng-apexcharts';
 import { DropdownComponent } from '../../ui/dropdown/dropdown.component';
 import { DropdownItemComponent } from '../../ui/dropdown/dropdown-item/dropdown-item.component';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-monthly-target',
   imports: [
     NgApexchartsModule,
     DropdownComponent,
-    DropdownItemComponent
-],
+    DropdownItemComponent,
+    TranslatePipe
+  ],
   templateUrl: './monthly-target.component.html',
 })
 export class MonthlyTargetComponent {

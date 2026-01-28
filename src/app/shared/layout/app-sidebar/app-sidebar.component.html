@@ -59,7 +59,7 @@
             }"
           >
             @if ((isExpanded$ | async) || (isHovered$ | async) || (isMobileOpen$ | async)) 
-            { Menu } 
+            { <span>{{ 'sidebar.menu' | translate }}</span> } 
            @else {
             <svg
               width="1em"
@@ -106,7 +106,7 @@
                   (isMobileOpen$ | async)) {
 
                   <span class="menu-item-text">
-                    {{ nav.name }}
+                    <span>{{ nav.nameKey ? (nav.nameKey | translate) : nav.name }}</span>
                   </span>
                   } 
                   @if (nav.new && ((isExpanded$ | async) || (isHovered$ |
@@ -118,7 +118,7 @@
                       'menu-dropdown-badge-inactive': openSubmenu !== 'main-' + i
                     }"
                   >
-                    new
+                    <span>{{ 'sidebar.new' | translate }}</span>
                   </span>
                   } 
                   @if ((isExpanded$ | async) || (isHovered$ | async) ||
@@ -172,7 +172,7 @@
                               'menu-dropdown-item-active': isActive(subItem.path),
                             }"
                       >
-                        {{ subItem.name }}
+                        <span>{{ subItem.nameKey ? (subItem.nameKey | translate) : subItem.name }}</span>
                         <span class="flex items-center gap-1 ml-auto">
                           @if (subItem.new) {
                           <span
@@ -186,7 +186,7 @@
                               )
                             }"
                           >
-                            new
+                            <span>{{ 'sidebar.new' | translate }}</span>
                           </span>
                           }
                           @if (subItem.pro) {
@@ -201,7 +201,7 @@
                               )
                             }"
                           >
-                            pro
+                            <span>{{ 'sidebar.pro' | translate }}</span>
                           </span>
                           }
                         </span>
@@ -231,7 +231,7 @@
                     class="menu-item-text"
                   >
                     @if ((isExpanded$ | async) || (isHovered$ | async) || (isMobileOpen$ | async)) {
-                    {{ nav.name }}
+                    <span>{{ nav.nameKey ? (nav.nameKey | translate) : nav.name }}</span>
                     }
                   </span>
                 </a>
@@ -262,7 +262,7 @@
                 (isHovered$ | async) ||
                 (isMobileOpen$ | async)
             ) {
-              Others
+              <span>{{ 'sidebar.others' | translate }}</span>
             } @else {
               <svg
                 width="1em"

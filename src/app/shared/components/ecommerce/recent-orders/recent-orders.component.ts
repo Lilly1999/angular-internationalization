@@ -1,25 +1,6 @@
-// import { CommonModule } from '@angular/common';
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-recent-orders',
-//   imports: [CommonModule],
-//   templateUrl: './recent-orders.component.html',
-//   styleUrl: './recent-orders.component.css'
-// })
-// export class RecentOrdersComponent {
-
-// }
-
-
-
 import { Component } from '@angular/core';
-// import { TableComponent } from '../../ui/table/table.component';
-// import { TableBodyComponent } from '../../ui/table/table-body.component';
-// import { TableCellComponent } from '../../ui/table/table-cell.component';
-// import { TableHeaderComponent } from '../../ui/table/table-header.component';
-// import { TableRowComponent } from '../../ui/table/table-row.component';
 import { BadgeComponent } from '../../ui/badge/badge.component';
+import { TranslatePipe } from '../../../pipes/translate.pipe';
 
 interface Product {
   id: number;
@@ -34,8 +15,9 @@ interface Product {
 @Component({
   selector: 'app-recent-orders',
   imports: [
-    BadgeComponent
-],
+    BadgeComponent,
+    TranslatePipe
+  ],
   templateUrl: './recent-orders.component.html'
 })
 export class RecentOrdersComponent {
